@@ -1,9 +1,16 @@
 import '../styles/searchBar.css'
 
-let searchBar = <div>
-    <form name="searchForm" id="searchBarForm">
+function SearchForm() {
+    function FormSubmit(event) {
+        let searchValue = ((document.getElementById('searchName').value));
+        event.preventDefault();
+        console.log(searchValue)
+    }
+    return (
+        <form name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
         <input type="text" id="searchName" placeholder="Enter location here..." />
-    </form>
-</div>
+        </form>
+    )
+}
 
-export default searchBar
+export default SearchForm
