@@ -20,7 +20,7 @@ function WeatherData() {
         <div className="weatherDataDiv">
         {<h1>{data?.location?.country}, {data?.location?.name}</h1>}
         {<h2>{data?.location?.region}</h2>}
-        <img src={data?.current?.condition?.icon} alt="weather condition icon"></img>
+        <img id='weatherDataDivImage' src={data?.current?.condition?.icon} alt="weather condition icon"></img>
         <p>It is currently {data?.current?.condition?.text}, with a UV index of {data?.current?.uv}</p>
         {<p>It is currently {data?.location?.localtime}</p>}
         {<p>It is currently {data?.current?.temp_c} degrees Celcius.</p>}
