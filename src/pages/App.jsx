@@ -1,13 +1,15 @@
 import '../styles/App.css';
 import header from '../components/header';
-import SearchForm from '../components/searchBar';
+import SearchBar from '../components/searchBar';
+import WeatherData from '../components/weatherData'
 
 
 function App() {
   return (
     <div className="App">
       {header}
-      <SearchForm />
+      <SearchBar />
+      <WeatherData />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import '../styles/searchBar.css'
 
-function SearchForm() {
+function SearchBar() {
     function FormSubmit(event) {
         let searchValue = ((document.getElementById('searchName').value));
         event.preventDefault();
@@ -13,4 +13,4 @@ function SearchForm() {
     )
 }
 
-export default SearchForm
+export default SearchBar
