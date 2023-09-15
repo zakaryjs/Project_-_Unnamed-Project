@@ -10,7 +10,7 @@ function WeatherData() {
     }, [])
 
     async function getData() {
-        let url = "http://api.weatherapi.com/v1/current.json?key=&q=perth&aqi=no"
+        let url = `http://api.weatherapi.com/v1/current.json?key=&q=perth&aqi=no`
         let response = await fetch(url)
         const data = await response.json()
         setData(data)
@@ -23,7 +23,7 @@ function WeatherData() {
         <img id='weatherDataDivImage' src={data?.current?.condition?.icon} alt="weather condition icon"></img>
         <p>It is currently {data?.current?.condition?.text}, with a UV index of {data?.current?.uv}</p>
         {<p>It is currently {data?.location?.localtime}</p>}
-        {<p>It is currently {data?.current?.temp_c} degrees Celcius.</p>}
+        {<p>It is currently {data?.current?.temp_c} degrees Celsius.</p>}
         {<p></p>}
         </div>
     )
