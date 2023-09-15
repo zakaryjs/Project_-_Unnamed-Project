@@ -18,7 +18,14 @@ function ForecastData() {
     }
     return (
         <div className="forecastDataDiv">
-            {<p>{data?.forecast?.forecastday?.[0]?.date}</p>}
+            <h2>Forecast</h2>
+            <p>Today:</p>
+            <p>Predicted condition: {data?.forecast?.forecastday?.[0]?.day?.condition?.text}</p>
+            <img src={data?.forecast?.forecastday?.[0]?.day?.condition?.icon} alt="forecast condition icon"></img>
+            {<p>{data?.forecast?.forecastday?.[0]?.day?.daily_chance_of_rain}% chance of rain.</p>}
+            {<p>Maximum temperature: {data?.forecast?.forecastday?.[0]?.day?.maxtemp_c} degrees Celcius</p>}
+            {<p>Minimum temperature: {data?.forecast?.forecastday?.[0]?.day?.mintemp_c} degrees Celcius</p>}
+            {/* {<p>{data?.forecast?.forecastday?.[0]?.date}</p>} */}
         </div>
     )
 }
