@@ -4,25 +4,22 @@ function ForecastData({ weatherLocation }) {
     return (
         <div className="forecastDataDiv">
             <h2>Forecast</h2>
-            <p>Today:</p>
-            {<p>Sunrise: {weatherLocation?.forecast?.forecastday?.[0]?.astro?.sunrise} </p>}
-            {<p>Sunset: {weatherLocation?.forecast?.forecastday?.[0]?.astro?.sunset} </p>}
-            <p>Predicted condition: {weatherLocation?.forecast?.forecastday?.[0]?.day?.condition?.text}</p>
-            <img src={weatherLocation?.forecast?.forecastday?.[0]?.day?.condition?.icon} alt="forecast condition icon"></img>
-            {<p>{weatherLocation?.forecast?.forecastday?.[0]?.day?.daily_chance_of_rain}% chance of rain.</p>}
-            {<p>Maximum temperature: {weatherLocation?.forecast?.forecastday?.[0]?.day?.maxtemp_c} degrees Celsius</p>}
-            {<p>Minimum temperature: {weatherLocation?.forecast?.forecastday?.[0]?.day?.mintemp_c} degrees Celsius</p>}
-            {/* add drop down div for hourly data */}
-            {/* also add conditional to only show data for after the current time */}
-            {/* data will include temp, chance of rain */}
-            <p>Tomorrow:</p>
-            {<p>Sunrise: {weatherLocation?.forecast?.forecastday?.[1]?.astro?.sunrise} </p>}
-            {<p>Sunset: {weatherLocation?.forecast?.forecastday?.[1]?.astro?.sunset} </p>}
-            <p>Predicted condition: {weatherLocation?.forecast?.forecastday?.[1]?.day?.condition?.text}</p>
-            <img src={weatherLocation?.forecast?.forecastday?.[1]?.day?.condition?.icon} alt="forecast condition icon"></img>
-            {<p>{weatherLocation?.forecast?.forecastday?.[1]?.day?.daily_chance_of_rain}% chance of rain.</p>}
-            {<p>Maximum temperature: {weatherLocation?.forecast?.forecastday?.[1]?.day?.maxtemp_c} degrees Celsius</p>}
-            {<p>Minimum temperature: {weatherLocation?.forecast?.forecastday?.[1]?.day?.mintemp_c} degrees Celsius</p>}
+            <div>
+                {weatherLocation.forecast.forecastday.map(day => (
+                    <div key={day.date}>
+                    <img src={day.day.condition.icon}></img>
+                    <h3>{day.date}</h3>
+                    <p>Sunrise: {day.astro.sunrise}</p>
+                    <p>Sunset: {day.astro.sunset}</p>
+                    <p>Predicted condition: {day.day.condition.text}</p>
+                    <p>{day.day.daily_chance_of_rain}% chance of rain.</p>
+                    <p>Maximum temperature: {day.day.maxtemp_c} degrees Celsius</p>
+                    <p>Maximum temperature: {day.day.mintemp_c} degrees Celsius</p>
+                    </div>
+                ))}
+            </div>
+            
+            
         </div>
     )
 }
