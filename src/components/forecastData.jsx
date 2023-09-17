@@ -15,6 +15,14 @@ function ForecastData({ weatherLocation }) {
             {/* add drop down div for hourly data */}
             {/* also add conditional to only show data for after the current time */}
             {/* data will include temp, chance of rain */}
+            <p>Tomorrow:</p>
+            {<p>Sunrise: {weatherLocation?.forecast?.forecastday?.[1]?.astro?.sunrise} </p>}
+            {<p>Sunset: {weatherLocation?.forecast?.forecastday?.[1]?.astro?.sunset} </p>}
+            <p>Predicted condition: {weatherLocation?.forecast?.forecastday?.[1]?.day?.condition?.text}</p>
+            <img src={weatherLocation?.forecast?.forecastday?.[1]?.day?.condition?.icon} alt="forecast condition icon"></img>
+            {<p>{weatherLocation?.forecast?.forecastday?.[1]?.day?.daily_chance_of_rain}% chance of rain.</p>}
+            {<p>Maximum temperature: {weatherLocation?.forecast?.forecastday?.[1]?.day?.maxtemp_c} degrees Celsius</p>}
+            {<p>Minimum temperature: {weatherLocation?.forecast?.forecastday?.[1]?.day?.mintemp_c} degrees Celsius</p>}
         </div>
     )
 }
