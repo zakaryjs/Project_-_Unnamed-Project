@@ -1,29 +1,15 @@
 import '../styles/weatherData.css'
-import { useEffect, useState } from "react";
 
+function WeatherData({ weatherLocation }) {
 
-function WeatherData() {
-    const [data, setData] = useState(true);
-
-    useEffect( () => {
-        getData()
-    }, [])
-
-    async function getData() {
-        let url = `http://api.weatherapi.com/v1/current.json?key=&q=perth&aqi=no`
-        let response = await fetch(url)
-        const data = await response.json()
-        setData(data)
-        console.log(data)
-    }
     return (
         <div className="weatherDataDiv">
-        {<h1>{data?.location?.country}, {data?.location?.name}</h1>}
-        {<h2>{data?.location?.region}</h2>}
-        <img id='weatherDataDivImage' src={data?.current?.condition?.icon} alt="weather condition icon"></img>
-        <p>It is currently {data?.current?.condition?.text}, with a UV index of {data?.current?.uv}</p>
-        {<p>It is currently {data?.location?.localtime}</p>}
-        {<p>It is currently {data?.current?.temp_c} degrees Celsius.</p>}
+        {<h1>{weatherLocation?.location?.country}, {weatherLocation?.location?.name}</h1>}
+        {<h2>{weatherLocation?.location?.region}</h2>}
+        <img id='weatherLocationDivImage' src={weatherLocation?.current?.condition?.icon} alt="weatherLocation condition icon"></img>
+        <p>It is currently {weatherLocation?.current?.condition?.text}, with a UV index of {weatherLocation?.current?.uv}</p>
+        {<p>It is currently {weatherLocation?.location?.localtime}</p>}
+        {<p>It is currently {weatherLocation?.current?.temp_c} degrees Celsius.</p>}
         {<p></p>}
         </div>
     )
