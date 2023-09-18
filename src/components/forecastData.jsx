@@ -13,8 +13,8 @@ function ForecastData({ weatherLocation }) {
                     <p>Sunset: {day.astro.sunset}</p>
                     <p>Predicted condition: {day.day.condition.text}</p>
                     <p>{day.day.daily_chance_of_rain}% chance of rain.</p>
-                    <p>Maximum temperature: {day.day.maxtemp_c} degrees Celsius</p>
-                    <p>Maximum temperature: {day.day.mintemp_c} degrees Celsius</p>
+                    <p>Maximum temperature: {day.day.maxtemp_c}°C</p>
+                    <p>Minimum temperature: {day.day.mintemp_c}°C</p>
                     </div>
                 ))}
             </div>

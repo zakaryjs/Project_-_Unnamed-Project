@@ -8,9 +8,10 @@ function WeatherData({ weatherLocation }) {
         {<h2>{weatherLocation?.location?.region}</h2>}
         <h3>Right Now:</h3>
         <img id='weatherLocationDivImage' src={weatherLocation?.current?.condition?.icon} alt="weatherLocation condition icon"></img>
-        <p>It is currently {weatherLocation?.current?.condition?.text}, with a UV index of {weatherLocation?.current?.uv}</p>
+        <p>Current condition: {weatherLocation?.current?.condition?.text}</p>
+        <p>UV index of: {weatherLocation?.current?.uv}</p>
         {<p>It is currently {weatherLocation?.location?.localtime}</p>}
-        {<p>It is currently {weatherLocation?.current?.temp_c} degrees Celsius.</p>}
+        {<p>It is currently {weatherLocation?.current?.temp_c}°C</p>}
         {<p></p>}
         </div>
     )

@@ -1,11 +1,9 @@
-* {
-  background-color: #61dafb;
-}
-
 .App {
   text-align: center;
   color: white;
   border: 5px solid white;
   border-radius: 2px;
   min-height: 100vh;
+  background-color: #61dafb;
+  font-family: 'VT323', monospace;
 }

@@ -3,6 +3,7 @@ input {
     border: 3px solid white;
     border-radius: 5px;
     padding: 5px;
+    width: 206px;
 }
 
 input::placeholder {
