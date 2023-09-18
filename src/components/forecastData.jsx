@@ -7,8 +7,8 @@ function ForecastData({ weatherLocation }) {
             <div>
                 {weatherLocation.forecast.forecastday.map(day => (
                     <div key={day.date}>
-                    <img src={day.day.condition.icon}></img>
-                    <h3>{day.date}</h3>
+                    <h3><u>{day.date}</u></h3>
+                    <img src={day.day.condition.icon} alt="forecast icon"></img>
                     <p>Sunrise: {day.astro.sunrise}</p>
                     <p>Sunset: {day.astro.sunset}</p>
                     <p>Predicted condition: {day.day.condition.text}</p>
