@@ -15,6 +15,12 @@ function App() {
     setWeatherLocation(data)
   }
 
+  const [shown, setShown] = useState(false)
+
+  const forecastToggle = () => {
+    setShown((shown) => !shown)
+  }
+
   return (
     <div className="App">
       {/* basic header component */}
@@ -23,8 +29,10 @@ function App() {
       <SearchBar onFormSubmit={handleFormSubmit}/>
       {/* div to display the fetched weather data */}
       {weatherLocation && <WeatherData weatherLocation={weatherLocation} />}
+      {weatherLocation && <button id='toggleButton' onClick={forecastToggle}>Toggle Forecast</button>}
       {/* div to display the fetched forecast data */}
-      {weatherLocation && <ForecastData weatherLocation={weatherLocation} />}
+      {shown && weatherLocation && <ForecastData weatherLocation={weatherLocation} />}
+      
     </div>
   );
 }

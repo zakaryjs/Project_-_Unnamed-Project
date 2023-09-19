@@ -7,3 +7,15 @@
   background-color: #61dafb;
   font-family: 'VT323', monospace;
 }
+
+#toggleButton {
+  all: unset;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 206px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
