@@ -1,8 +1,60 @@
-.weatherDataDiv {
-    margin-top: 4%;
+p {
+  font-size: 22px;
+  text-shadow:
+        0.06em 0 black,
+        0 0.06em black,
+        -0.06em 0 black,
+        0 -0.06em black;
 }
 
-#weatherDataDivImage {
+.dataHeader {
+  text-shadow:
+        0.06em 0 black,
+        0 0.06em black,
+        -0.06em 0 black,
+        0 -0.06em black;
+}
+
+.weatherDataDiv {
+    margin-top: 4%;
+    margin: 10%;
+    padding: 5px;
+    border: 6px solid white;
+    border-radius: 4px;
+    background-color: darkblue;
+  }
+  
+  #weatherDataDivImage {
     border: 2px solid white;
     border-radius: 5px;
+  }
+
+.patchyRain {
+    margin-top: 4%;
+    margin: 10%;
+    padding: 5px;
+    border: 6px solid white;
+    border-radius: 4px;
+    background-image: url(https://i.pinimg.com/originals/1a/d0/48/1ad048002f28b28be8b8be7d9cf71baf.gif);
+
+}
+
+.clear {
+    margin-top: 4%;
+    margin: 10%;
+    padding: 5px;
+    border: 6px solid white;
+    border-radius: 4px;
+    background-image: url(https://gifdb.com/images/high/blue-water-scenery-pixel-5yix4ym0y2m8eof1.gif);
+}
+
+.partlyCloudy {
+  margin-top: 4%;
+    margin: 10%;
+    padding: 5px;
+    border: 6px solid white;
+    border-radius: 4px;
+    background-image: url(https://i.gifer.com/WMV.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
