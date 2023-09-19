@@ -3,10 +3,10 @@ import '../styles/weatherData.css'
 function WeatherData({ weatherLocation }) {
 
     return (
-        <div className={weatherLocation.current.condition.text === 'Patchy rain possible' ? 'patchyRain':
-        weatherLocation.current.condition.text === 'Clear' ? 'clear':
-        weatherLocation.current.condition.text === 'Sunny' ? 'clear':
-        weatherLocation.current.condition.text === 'Partly cloudy' ? 'partlyCloudy':
+        <div className=
+        {weatherLocation.current.condition.code === 1063 ? 'patchyRain':
+        weatherLocation.current.condition.code === 1000 ? 'clear':
+        weatherLocation.current.condition.code === 1003 ? 'partlyCloudy':
         'weatherDataDiv'}>
         {<h1 className='dataHeader'>{weatherLocation?.location?.country}, {weatherLocation?.location?.name}</h1>}
         {<h2 className='dataHeader'>{weatherLocation?.location?.region}</h2>}
