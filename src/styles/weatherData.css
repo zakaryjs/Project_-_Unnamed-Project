@@ -24,8 +24,8 @@ p {
     background-color: darkblue;
   }
   
-  #weatherDataDivImage {
-    border: 2px solid white;
+  #weatherLocationDivImage {
+    border: 1px solid white;
     border-radius: 5px;
   }
 
@@ -57,4 +57,13 @@ p {
     background-image: url(https://i.gifer.com/WMV.gif);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.lightRain {
+  margin-top: 4%;
+  margin: 10%;
+  padding: 5px;
+  border: 6px solid white;
+  border-radius: 4px;
+  background-image: url(https://openseauserdata.com/files/18d14aea30388f07a10f9c1c8d13c702.gif);
 }

@@ -1,4 +1,4 @@
-
+import '../styles/forecastData.css'
 function ForecastData({ weatherLocation }) {
 
     return (

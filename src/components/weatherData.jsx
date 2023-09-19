@@ -7,6 +7,8 @@ function WeatherData({ weatherLocation }) {
         {weatherLocation.current.condition.code === 1063 ? 'patchyRain':
         weatherLocation.current.condition.code === 1000 ? 'clear':
         weatherLocation.current.condition.code === 1003 ? 'partlyCloudy':
+        weatherLocation.current.condition.code === 1183 ? 'lightRain':
+        weatherLocation.current.condition.code === 1150 ? 'lightRain':
         'weatherDataDiv'}>
         {<h1 className='dataHeader'>{weatherLocation?.location?.country}, {weatherLocation?.location?.name}</h1>}
         {<h2 className='dataHeader'>{weatherLocation?.location?.region}</h2>}
