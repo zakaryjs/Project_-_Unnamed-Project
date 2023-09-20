@@ -17,7 +17,9 @@ p {
 
 .weatherDataDiv {
     margin-top: 4%;
-    margin: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15px;
     padding: 5px;
     border: 6px solid white;
     border-radius: 4px;
@@ -31,7 +33,9 @@ p {
 
 .patchyRain {
     margin-top: 4%;
-    margin: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
     padding: 5px;
     border: 6px solid white;
     border-radius: 4px;
@@ -43,7 +47,9 @@ p {
 
 .clear {
     margin-top: 4%;
-    margin: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
     padding: 5px;
     border: 6px solid white;
     border-radius: 4px;
@@ -53,8 +59,10 @@ p {
 }
 
 .partlyCloudy {
-  margin-top: 4%;
-    margin: 10%;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
     padding: 5px;
     border: 6px solid white;
     border-radius: 4px;
@@ -65,7 +73,9 @@ p {
 
 .lightRain {
   margin-top: 4%;
-  margin: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
   padding: 5px;
   border: 6px solid white;
   border-radius: 4px;
