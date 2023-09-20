@@ -3,6 +3,7 @@ import '../styles/weatherData.css'
 function WeatherData({ weatherLocation }) {
 
     return (
+        // conditional rendering to determine which background should be displayed - this is dependent on the weather condition code, apart of the API response
         <div className=
         {weatherLocation.current.condition.code === 1063 ? 'patchyRain':
         weatherLocation.current.condition.code === 1000 ? 'clear':

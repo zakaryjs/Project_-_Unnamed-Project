@@ -23,15 +23,14 @@ export default function SearchBar({ onFormSubmit }) {
         return (
             <ClipLoader id='loader' color="#ffffff" />
         )
-        
+    } else {
+        return (
+            <div id='searchBar'>
+                <form name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
+                <input type="text" onChange={handleLocationChange} id="searchName" placeholder="Enter location here..." />
+                </form>
+            </div>
+            
+        )
     }
-
-    return (
-        <div id='searchBar'>
-            <form name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
-            <input type="text" onChange={handleLocationChange} id="searchName" placeholder="Enter location here..." />
-            </form>
-        </div>
-        
-    )
 }

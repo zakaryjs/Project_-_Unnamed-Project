@@ -2,10 +2,12 @@ import '../styles/forecastData.css'
 function ForecastData({ weatherLocation }) {
 
     return (
+        // renders forecastDataDiv
         <div className="forecastDataDiv">
             <h2>Forecast</h2>
             <div>
                 <div>
+                    {/* maps over the 3 days in the API response (today, tomorrow, day after tomorrow) to show the specified details */}
                 {weatherLocation.forecast.forecastday.map(day => (
                     <div key={day.date}>
                     <h3><u>{day.date}</u></h3>

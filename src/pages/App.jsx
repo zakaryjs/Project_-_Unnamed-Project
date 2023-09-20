@@ -15,28 +15,33 @@ function App() {
     setWeatherLocation(data)
   }
 
+  // declares shown with a state of false
   const [shown, setShown] = useState(false)
 
+  // function to toggle whether the shown state is true or false - if shown is true, show the button that allows users to toggle whether
+  // the forecast data is shown
   const forecastToggle = () => {
     setShown((shown) => !shown)
   }
 
+  // declares date variables to get browsers current time and convert it into readable format
   let date = new Date()
   let localisedDate = date.toLocaleTimeString()
 
   return (
+    // conditional rendering: is the browser time past 6pm? If so, show the 'nightTime' background
     <div className=
-    {(localisedDate.charAt(1) > 7 || localisedDate.charAt(0) > 1) ? 'nightTime' : 'dayTime'}>
+    {(localisedDate.charAt(0) > 1 || localisedDate.charAt(1) > 7) ? 'nightTime' : 'dayTime'}>
       {/* basic header component */}
       {header}
       {/* search bar component responsible for getting the location the user is searching for */}
       <SearchBar onFormSubmit={handleFormSubmit}/>
       {/* div to display the fetched weather data */}
       {weatherLocation && <WeatherData weatherLocation={weatherLocation} />}
+      {/* button to toggle whether forecast data is shown */}
       {weatherLocation && <button id='toggleButton' onClick={forecastToggle}>Toggle Forecast</button>}
       {/* div to display the fetched forecast data */}
       {shown && weatherLocation && <ForecastData weatherLocation={weatherLocation} />}
-      
     </div>
   );
 }
