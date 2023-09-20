@@ -5,8 +5,18 @@
 
 #siteHeader {
     font-size: 48px;
+    text-shadow:
+        0.06em 0 black,
+        0 0.06em black,
+        -0.06em 0 black,
+        0 -0.06em black;
 }
 
 #siteSubHeader {
     font-size: 28px;
+    text-shadow:
+        0.06em 0 black,
+        0 0.06em black,
+        -0.06em 0 black,
+        0 -0.06em black;
 }

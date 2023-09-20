@@ -4,10 +4,11 @@ input {
     border-radius: 5px;
     padding: 5px;
     width: 206px;
+    font-size: 20px;
 }
 
 input::placeholder {
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
 }
