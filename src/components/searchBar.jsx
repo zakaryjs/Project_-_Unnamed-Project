@@ -3,20 +3,20 @@ import '../styles/searchBar.css'
 import { ClipLoader } from 'react-spinners';
 
 export default function SearchBar({ onFormSubmit }) {
-    const [weatherLocation, setWeatherLocation] = useState("")
+    const [weatherSearch, setWeatherSearch] = useState("")
     const [loading, setLoading] = useState(false)
 
     async function FormSubmit(event) {
         event.preventDefault();
         setLoading(true)
         let key = ''
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${weatherLocation}&days=3&aqi=no&alerts=no`)
+        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${weatherSearch}&days=3&aqi=no&alerts=no`)
         const data = await response.json()
         onFormSubmit(data)
         setLoading(false)
     }
     let handleLocationChange = (event) => {
-        setWeatherLocation(event.target.value)
+        setWeatherSearch(event.target.value)
     }
 
     if (loading) {
