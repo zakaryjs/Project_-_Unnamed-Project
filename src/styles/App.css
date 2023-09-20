@@ -30,4 +30,6 @@
   background-color: #61dafb;
   font-family: 'VT323', monospace;
   background-image: url(https://media.tenor.com/R2zqycugcuQAAAAC/pixel-night.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
