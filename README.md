@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Weatherly
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## A website built with React, for those who frequently ask the question - "what's the weather like?"
 
-## Available Scripts
+## Requires [WeatherAPI key](https://www.weatherapi.com/) - place in line 12 of src/components/searchBar.jsx, between the quote marks.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Animated Backgrounds
+Is it day or night? From 5PM until midnight, the app background changes in order to show that it is night time - though this does not effect the conditions inside the Weather Data Div.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Day Main Screen](./docs/dayMain.png)
+![Night Main Screen](./docs/nightMain.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Search Bar
+Use the search bar to search for a location. On submit, a weather data div is returned, detailing the current weather conditions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Weather Data Div
+- The name of the location
+- An image representing the current condition
+- A text description of the current condition
+- The current UV index
+- The current time
+- The current temperature
 
-### `npm run build`
+All with an animated background which changes depending on the current weather condition.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Weather Data Example Clear](./docs/exampleWeatherData.png)
+![Weather Data Example Cloudy](./docs/exampleWeatherDataCloudy.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Forecast Data Toggle
+Want to know what the upcoming weather is like?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Simply click the "toggle forecast" button to show/hide the upcoming weather over the next two days.
 
-### `npm run eject`
+### Forecast Data Div
+- An image representing the presented condition
+- The estimated sunrise time
+- The estimated sunset time
+- A text description of the predicted condition
+- The chance of rain on that day
+- The predicted maximum temperature
+- The predicted minimum temperature
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Forecast Data Example](./docs/exampleForecastData.png)
