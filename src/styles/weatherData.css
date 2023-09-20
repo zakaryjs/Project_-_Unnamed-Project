@@ -36,6 +36,8 @@ p {
     border: 6px solid white;
     border-radius: 4px;
     background-image: url(https://i.pinimg.com/originals/1a/d0/48/1ad048002f28b28be8b8be7d9cf71baf.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -46,6 +48,8 @@ p {
     border: 6px solid white;
     border-radius: 4px;
     background-image: url(https://gifdb.com/images/high/blue-water-scenery-pixel-5yix4ym0y2m8eof1.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .partlyCloudy {
@@ -66,4 +70,6 @@ p {
   border: 6px solid white;
   border-radius: 4px;
   background-image: url(https://openseauserdata.com/files/18d14aea30388f07a10f9c1c8d13c702.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
