@@ -21,8 +21,12 @@ function App() {
     setShown((shown) => !shown)
   }
 
+  let date = new Date()
+  let localisedDate = date.toLocaleTimeString()
+
   return (
-    <div className="App">
+    <div className=
+    {(localisedDate.charAt(1) > 7 || localisedDate.charAt(0) > 1) ? 'nightTime' : 'dayTime'}>
       {/* basic header component */}
       {header}
       {/* search bar component responsible for getting the location the user is searching for */}
