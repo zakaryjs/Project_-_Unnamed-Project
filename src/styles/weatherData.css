@@ -5,6 +5,9 @@ p {
         0 0.06em black,
         -0.06em 0 black,
         0 -0.06em black;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .dataHeader {

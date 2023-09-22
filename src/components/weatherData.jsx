@@ -8,7 +8,7 @@ function WeatherData({ weatherLocation }) {
             <div className=
             {weatherLocation.current.condition.code === 1063 ? 'patchyRain':
             weatherLocation.current.condition.code === 1000 ? 'clear':
-            weatherLocation.current.condition.code === 1003 ? 'partlyCloudy':
+            weatherLocation.current.condition.code === 1003 || 1006 ? 'partlyCloudy':
             weatherLocation.current.condition.code === 1183 ? 'lightRain':
             weatherLocation.current.condition.code === 1150 ? 'lightRain':
             'weatherDataDiv'}>
@@ -31,6 +31,8 @@ function WeatherData({ weatherLocation }) {
                 {<p>There has been an error.</p>}
                 {<p>This could include an invalid location name, or misspelling.</p>}
                 {<p>Please try again.</p>}
+                {<p>Error Message:</p>}
+                {<p>{error.message}</p>}
             </div>
         )
     }
