@@ -4,6 +4,7 @@ import SearchBar from '../components/searchBar';
 import WeatherData from '../components/weatherData'
 import ForecastData from '../components/forecastData';
 import { useState } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
     setShown((shown) => !shown)
   }
 
+  const [loading, setLoading] = useState(false)
+
+
   // declares date variables to get browsers current time and convert it into readable format
   let date = new Date()
   let localisedDate = date.toLocaleTimeString()
@@ -35,11 +39,12 @@ function App() {
       {/* basic header component */}
       {header}
       {/* search bar component responsible for getting the location the user is searching for */}
-      <SearchBar onFormSubmit={handleFormSubmit}/>
+      <SearchBar onFormSubmit={handleFormSubmit} setLoading={setLoading}/>
+      {loading && <ClipLoader id='loader' color="#ffffff" />}
       {/* div to display the fetched weather data */}
-      {weatherLocation && <WeatherData weatherLocation={weatherLocation} />}
+      {weatherLocation && !loading && <WeatherData weatherLocation={weatherLocation} />}
       {/* button to toggle whether forecast data is shown */}
-      {weatherLocation && <button id='toggleButton' onClick={forecastToggle}>Toggle Forecast</button>}
+      {weatherLocation && !loading && <button id='toggleButton' onClick={forecastToggle}>Toggle Forecast</button>}
       {/* div to display the fetched forecast data */}
       {shown && weatherLocation && <ForecastData weatherLocation={weatherLocation} />}
     </div>

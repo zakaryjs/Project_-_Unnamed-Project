@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import '../styles/searchBar.css'
-import { ClipLoader } from 'react-spinners';
 
-export default function SearchBar({ onFormSubmit }) {
+
+export default function SearchBar({ onFormSubmit, setLoading }) {
     const [weatherSearch, setWeatherSearch] = useState("")
-    const [loading, setLoading] = useState(false)
+    
 
     async function FormSubmit(event) {
         event.preventDefault();
@@ -14,23 +14,17 @@ export default function SearchBar({ onFormSubmit }) {
         const data = await response.json()
         onFormSubmit(data)
         setLoading(false)
+        event.target.reset()
     }
     let handleLocationChange = (event) => {
         setWeatherSearch(event.target.value)
     }
 
-    if (loading) {
-        return (
-            <ClipLoader id='loader' color="#ffffff" />
-        )
-    } else {
-        return (
-            <div id='searchBar'>
-                <form name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
-                <input type="text" onChange={handleLocationChange} id="searchName" placeholder="Enter location here..." />
-                </form>
-            </div>
-            
+    return (
+        <div id='searchBar'>
+            <form name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
+            <input type="text" onChange={handleLocationChange} id="searchName" placeholder="Enter location here..." />
+            </form>
+        </div>    
         )
     }
-}
