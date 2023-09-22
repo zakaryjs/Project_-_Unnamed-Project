@@ -2,13 +2,14 @@ import { useState } from 'react';
 import '../styles/searchBar.css'
 
 
-export default function SearchBar({ onFormSubmit, setLoading }) {
+export default function SearchBar({ onFormSubmit, setLoading, setShown }) {
     const [weatherSearch, setWeatherSearch] = useState("")
     
 
     async function FormSubmit(event) {
         event.preventDefault();
         setLoading(true)
+        setShown(false)
         let key = ''
         const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${weatherSearch}&days=3&aqi=no&alerts=no`)
         const data = await response.json()

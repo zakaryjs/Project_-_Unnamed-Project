@@ -39,14 +39,14 @@ function App() {
       {/* basic header component */}
       {header}
       {/* search bar component responsible for getting the location the user is searching for */}
-      <SearchBar onFormSubmit={handleFormSubmit} setLoading={setLoading}/>
+      <SearchBar onFormSubmit={handleFormSubmit} setLoading={setLoading} setShown={setShown} />
       {loading && <ClipLoader id='loader' color="#ffffff" />}
       {/* div to display the fetched weather data */}
       {weatherLocation && !loading && <WeatherData weatherLocation={weatherLocation} />}
       {/* button to toggle whether forecast data is shown */}
       {weatherLocation && !loading && <button id='toggleButton' onClick={forecastToggle}>Toggle Forecast</button>}
       {/* div to display the fetched forecast data */}
-      {shown && weatherLocation && <ForecastData weatherLocation={weatherLocation} />}
+      {shown && weatherLocation && !loading && <ForecastData weatherLocation={weatherLocation} />}
     </div>
   );
 }
