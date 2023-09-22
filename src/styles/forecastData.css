@@ -1,10 +1,10 @@
 p {
     font-size: 22px;
     text-shadow:
-          0.08em 0 black,
-          0 0.08em black,
-          -0.08em 0 black,
-          0 -0.08em black;
+          0.06em 0 black,
+          0 0.06em black,
+          -0.06em 0 black,
+          0 -0.06em black;
   }
   
   .dataHeader {
@@ -16,6 +16,7 @@ p {
   }
   
   .forecastDataDiv {
+    background-color: lightblue;
       margin-top: 4%;
       margin-left: 10%;
       margin-right: 10%;
@@ -24,8 +25,26 @@ p {
       border: 6px solid white;
       border-radius: 4px;
       text-shadow:
-          0.08em 0 black,
-          0 0.08em black,
-          -0.08em 0 black,
-          0 -0.08em black;
+          0.06em 0 black,
+          0 0.06em black,
+          -0.06em 0 black,
+          0 -0.06em black;
     }
+
+#forecastH2 {
+  font-size: 36px;
+  text-shadow:
+          0.06em 0 black,
+          0 0.06em black,
+          -0.06em 0 black,
+          0 -0.06em black;
+}
+
+h3 {
+  font-size: 28px;
+  text-shadow:
+          0.06em 0 black,
+          0 0.06em black,
+          -0.06em 0 black,
+          0 -0.06em black;
+}

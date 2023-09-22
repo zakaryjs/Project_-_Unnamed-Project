@@ -4,7 +4,7 @@ function ForecastData({ weatherLocation }) {
     return (
         // renders forecastDataDiv
         <div className="forecastDataDiv">
-            <h2>Forecast</h2>
+            <h2 id='forecastH2'>Forecast</h2>
             <div>
                 <div>
                     {/* maps over the 3 days in the API response (today, tomorrow, day after tomorrow) to show the specified details */}
