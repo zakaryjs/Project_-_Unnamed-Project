@@ -2,7 +2,7 @@
 
 ## A website built with React, for those who frequently ask the question - "what's the weather like?"
 
-## Requires [WeatherAPI key](https://www.weatherapi.com/) - place in line 12 of src/components/searchBar.jsx, between the quote marks.
+## Requires [WeatherAPI key](https://www.weatherapi.com/) - place in line 14 of src/components/searchBar.jsx, between the quote marks.
 
 ## Features
 
