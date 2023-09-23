@@ -1,5 +1,5 @@
 import '../styles/forecastData.css'
-function ForecastData({ weatherLocation }) {
+export default function ForecastData({ weatherLocation }) {
 
     try {
         return (
@@ -33,5 +33,3 @@ function ForecastData({ weatherLocation }) {
         )
     }
 }
-
-export default ForecastData

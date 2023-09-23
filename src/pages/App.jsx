@@ -6,7 +6,7 @@ import ForecastData from '../components/forecastData';
 import { useState } from 'react';
 import { ClipLoader } from 'react-spinners';
 
-function App() {
+export default function App() {
   // declares variable weatherLocation with blank state for whether or not there is weather data available
   const [weatherLocation, setWeatherLocation] = useState("")
   
@@ -52,5 +52,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

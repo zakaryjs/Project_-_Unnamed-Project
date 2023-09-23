@@ -1,6 +1,6 @@
 import '../styles/weatherData.css'
 
-function WeatherData({ weatherLocation }) {
+export default function WeatherData({ weatherLocation }) {
 
     try {
         return (
@@ -20,7 +20,6 @@ function WeatherData({ weatherLocation }) {
             <p>UV index of: {weatherLocation?.current?.uv}</p>
             {<p>It is currently {weatherLocation?.location?.localtime}</p>}
             {<p>It is currently {weatherLocation?.current?.temp_c}°C</p>}
-            {<p></p>}
             </div>
         )
     } catch (error) {
@@ -33,7 +32,4 @@ function WeatherData({ weatherLocation }) {
             </div>
         )
     }
-    
 }
-
-export default WeatherData
