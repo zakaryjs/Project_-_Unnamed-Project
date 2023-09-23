@@ -6,9 +6,8 @@ import ForecastData from '../components/forecastData';
 import { useState } from 'react';
 import { ClipLoader } from 'react-spinners';
 
-
 function App() {
-  // declares variable weatherLocation with blank state
+  // declares variable weatherLocation with blank state for whether or not there is weather data available
   const [weatherLocation, setWeatherLocation] = useState("")
   
   // function that updates the state of weatherLocation whenever the search bar is submitted
@@ -16,7 +15,7 @@ function App() {
     setWeatherLocation(data)
   }
 
-  // declares shown with a state of false
+  // declares shown with a state of false for whether or not the toggle forecast button should be displayed
   const [shown, setShown] = useState(false)
 
   // function to toggle whether the shown state is true or false - if shown is true, show the button that allows users to toggle whether
@@ -25,15 +24,18 @@ function App() {
     setShown((shown) => !shown)
   }
 
+  // declares loading with a state of false for whether or not data is currently being fetched
   const [loading, setLoading] = useState(false)
 
-
-  // declares date variables to get browsers current time and convert it into readable format
-  let date = new Date()
-  let localisedDate = date.toLocaleTimeString()
+  // declare localisedDate to get browsers current time and convert it into readable format
+  let localisedDate = new Date().toLocaleTimeString()
 
   return (
-    // conditional rendering: is the browser time past 6pm? If so, show the 'nightTime' background
+    // example localisedDate: 13:36:23
+    // if the first digit of the date is greater than one, 2 - e.g: 20,21,22,23 - that means it is past 7pm
+    // if the second digit is greater than 7, that means it is 6pm
+    // these two conditions check to see whether it is 6pm or later, and if it is, 
+    // show the nightTime background instead of the day time background
     <div className=
     {(localisedDate.charAt(0) > 1 || localisedDate.charAt(1) > 7) ? 'nightTime' : 'dayTime'}>
       {/* basic header component */}
@@ -41,11 +43,11 @@ function App() {
       {/* search bar component responsible for getting the location the user is searching for */}
       <SearchBar onFormSubmit={handleFormSubmit} setLoading={setLoading} setShown={setShown} />
       {loading && <ClipLoader id='loader' color="#ffffff" />}
-      {/* div to display the fetched weather data */}
+      {/* component to display the fetched weather data - only rendered if there is data available and there is no loading */}
       {weatherLocation && !loading && <WeatherData weatherLocation={weatherLocation} />}
-      {/* button to toggle whether forecast data is shown */}
+      {/* button to toggle whether forecast data is shown - only rendered if there is data available and there is no loading */}
       {weatherLocation && !loading && <button id='toggleButton' onClick={forecastToggle}>Toggle Forecast</button>}
-      {/* div to display the fetched forecast data */}
+      {/* component to display the fetched forecast data - only rendered if there is data available, there is no loading, and the button has been toggled */}
       {shown && weatherLocation && !loading && <ForecastData weatherLocation={weatherLocation} />}
     </div>
   );

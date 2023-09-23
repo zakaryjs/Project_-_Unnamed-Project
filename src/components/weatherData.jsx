@@ -4,13 +4,13 @@ function WeatherData({ weatherLocation }) {
 
     try {
         return (
-            // conditional rendering to determine which background should be displayed - this is dependent on the weather condition code, apart of the API response
+            // conditional rendering to determine which background should be displayed:
+            // this is dependent on the weather condition code, which is a part of the API response
             <div className=
             {weatherLocation.current.condition.code === 1063 ? 'patchyRain':
             weatherLocation.current.condition.code === 1000 ? 'clear':
             weatherLocation.current.condition.code === 1003 || 1006 ? 'partlyCloudy':
-            weatherLocation.current.condition.code === 1183 ? 'lightRain':
-            weatherLocation.current.condition.code === 1150 ? 'lightRain':
+            weatherLocation.current.condition.code === 1183 || 1150 ? 'lightRain':
             'weatherDataDiv'}>
             {<h1 className='dataHeader'>{weatherLocation?.location?.country}, {weatherLocation?.location?.name}</h1>}
             {<h2 className='dataHeader'>{weatherLocation?.location?.region}</h2>}
@@ -23,15 +23,12 @@ function WeatherData({ weatherLocation }) {
             {<p></p>}
             </div>
         )
-    } 
-    catch (error) {
-        console.log(error)
+    } catch (error) {
         return (
             <div>
                 {<p>There has been an error.</p>}
                 {<p>This could include an invalid location name, or misspelling.</p>}
                 {<p>Please try again.</p>}
-                {<p>Error Message:</p>}
                 {<p>{error.message}</p>}
             </div>
         )

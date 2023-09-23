@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import '../styles/searchBar.css'
 
-
 export default function SearchBar({ onFormSubmit, setLoading, setShown }) {
     const [weatherSearch, setWeatherSearch] = useState("")
     
-
     async function FormSubmit(event) {
         event.preventDefault();
         try {
@@ -17,13 +15,13 @@ export default function SearchBar({ onFormSubmit, setLoading, setShown }) {
             onFormSubmit(data)
             setLoading(false)
             event.target.reset()
-        }
-        catch {
+        } catch {
             console.log("Invalid API key.")
             setLoading(false)
+            event.target.reset()
         }
-        
     }
+
     let handleLocationChange = (event) => {
         setWeatherSearch(event.target.value)
     }

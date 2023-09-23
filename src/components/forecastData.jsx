@@ -23,20 +23,15 @@ function ForecastData({ weatherLocation }) {
                     ))}
                     </div>
                 </div>
-                
-                
             </div>
         )
-    }
-    catch (error) {
-        console.log(error)
+    } catch (error) {
         return (
             <div>
                 {<p>No forecast data available.</p>}
             </div>
         )
     }
-    
 }
 
 export default ForecastData
