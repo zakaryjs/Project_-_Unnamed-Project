@@ -1,8 +1,10 @@
 # Weatherly
 
+## https://weatherlyreact.netlify.app/
+
 ## A website built with React, for those who frequently ask the question - "what's the weather like?"
 
-## Requires [WeatherAPI key](https://www.weatherapi.com/) - place in line 14 of src/components/searchBar.jsx, between the quote marks.
+## Requires [WeatherAPI key](https://www.weatherapi.com/) - create a .env file in the root folder with the value REACT_APP_KEY
 
 ## Features
 
