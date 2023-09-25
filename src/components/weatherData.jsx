@@ -1,7 +1,6 @@
 import '../styles/weatherData.css'
 
 export default function WeatherData({ weatherLocation }) {
-
     try {
         return (
             // conditional rendering to determine which background should be displayed:

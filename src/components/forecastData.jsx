@@ -1,6 +1,5 @@
 import '../styles/forecastData.css'
 export default function ForecastData({ weatherLocation }) {
-
     try {
         return (
             // renders forecastDataDiv

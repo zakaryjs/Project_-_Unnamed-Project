@@ -9,7 +9,7 @@ export default function SearchBar({ onFormSubmit, setLoading, setShown }) {
         try {
             setLoading(true)
             setShown(false)
-            let key = ''
+            // let key = ''
             const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${weatherSearch}&days=3&aqi=no&alerts=no`)
             const data = await response.json()
             onFormSubmit(data)
