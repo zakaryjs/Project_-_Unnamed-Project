@@ -29,7 +29,7 @@ export default function App() {
   const [loading, setLoading] = useState(false)
 
   // declare localisedDate to get browsers current time and convert it into readable format
-  let localisedDate = new Date().toLocaleTimeString()
+  let localisedDate = new Date().toLocaleTimeString('en-us', {hour12: false})
 
   return (
     // example localisedDate: 13:36:23
