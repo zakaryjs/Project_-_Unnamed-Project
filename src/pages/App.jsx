@@ -22,6 +22,7 @@ export default function App() {
   // the forecast data is shown
   const forecastToggle = () => {
     setShown((shown) => !shown)
+    console.log(localisedDate)
   }
 
   // declares loading with a state of false for whether or not data is currently being fetched
