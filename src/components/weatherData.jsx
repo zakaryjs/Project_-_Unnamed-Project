@@ -6,10 +6,15 @@ export default function WeatherData({ weatherLocation }) {
             // conditional rendering to determine which background should be displayed:
             // this is dependent on the weather condition code, which is a part of the API response
             <div className=
-            {weatherLocation.current.condition.code === 1063 || 1186 || 1189 || 1192 || 1201 || 1246 || 1276 ? 'patchyRain':
-            weatherLocation.current.condition.code === 1000 ? 'clear':
-            weatherLocation.current.condition.code === 1003 || 1006 ? 'partlyCloudy':
-            weatherLocation.current.condition.code === 1183 || 1150 || 1180 || 1198 || 1240 || 1273 ? 'lightRain':
+            {weatherLocation.current.condition.code === 1063 || weatherLocation.current.condition.code === 1195 || weatherLocation.current.condition.code === 1186 
+            || weatherLocation.current.condition.code === 1189 || weatherLocation.current.condition.code === 1192 
+            || weatherLocation.current.condition.code === 1201 || weatherLocation.current.condition.code === 1246 
+            || weatherLocation.current.condition.code === 1276 ? 'patchyRain':
+            weatherLocation.current.condition.code === 1000 || weatherLocation.current.condition.code === 1009 ? 'clear':
+            weatherLocation.current.condition.code === 1003 || weatherLocation.current.condition.code === 1006 ? 'partlyCloudy':
+            weatherLocation.current.condition.code === 1183 || weatherLocation.current.condition.code === 1150 ? 'lightRain':
+            weatherLocation.current.condition.code === 1180 || weatherLocation.current.condition.code === 1198 || weatherLocation.current.condition.code === 1240 
+            || weatherLocation.current.condition.code === 1273 ? 'lightRain':
             'weatherDataDiv'}>
             {<h1 className='dataHeader'>{weatherLocation?.location?.country}, {weatherLocation?.location?.name}</h1>}
             {<h2 className='dataHeader'>{weatherLocation?.location?.region}</h2>}
