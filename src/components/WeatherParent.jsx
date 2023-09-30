@@ -38,7 +38,7 @@ export default function WeatherParent() {
     // these two conditions check to see whether it is 6pm or later, and if it is, 
     // show the nightTime background instead of the day time background
     <div className=
-    {((localisedDate.charAt(0) > 0 && localisedDate.charAt(1) > 7 ) || localisedDate.charAt(0) > 0) ? 'nightTime' : 'dayTime'}>
+    {((localisedDate.charAt(0) > 0 && localisedDate.charAt(1) > 7 ) || localisedDate.charAt(0) > 1) ? 'nightTime' : 'dayTime'}>
       {/* basic header component */}
       {header}
       {/* search bar component responsible for getting the location the user is searching for */}
